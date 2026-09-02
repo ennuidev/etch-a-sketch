@@ -18,10 +18,10 @@ for (let i = 0; i < 256; i++) {
     squares.addEventListener("mouseover", () => {
         // squares.style.backgroundColor = "grey";
         let firstRGB = Math.floor(Math.random() * 256);
-let secondRGB = Math.floor(Math.random() * 256);
-let thirdRGB = Math.floor(Math.random() * 256);
+        let secondRGB = Math.floor(Math.random() * 256);
+        let thirdRGB = Math.floor(Math.random() * 256);
 
-const randomColors = [firstRGB, secondRGB, thirdRGB].join(',');
+    const randomColors = [firstRGB, secondRGB, thirdRGB].join(',');
         squares.style.backgroundColor = `rgb(${randomColors})`
          
     })
@@ -63,10 +63,10 @@ btn.addEventListener("click", () => {
             squares.addEventListener("mouseover", () => {
                 // squares.style.backgroundColor = "grey";
                 let firstRGB = Math.floor(Math.random() * 256);
-let secondRGB = Math.floor(Math.random() * 256);
-let thirdRGB = Math.floor(Math.random() * 256);
+                let secondRGB = Math.floor(Math.random() * 256);
+                let thirdRGB = Math.floor(Math.random() * 256);
 
-const randomColors = [firstRGB, secondRGB, thirdRGB].join(',');
+            const randomColors = [firstRGB, secondRGB, thirdRGB].join(',');
                 squares.style.backgroundColor = `rgb(${randomColors})`
             });
         }

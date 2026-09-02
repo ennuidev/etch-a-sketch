@@ -1,8 +1,7 @@
 const body = document.querySelector("body")
 const container = document.querySelector(".container");
-
-
 const btn = document.createElement("button")
+
 body.appendChild(btn);
 btn.textContent = "Pick your grid size!"
 
@@ -13,9 +12,17 @@ for (let i = 0; i < 256; i++) {
     const squares = document.createElement("div");
     squares.classList.add("squares")
     container.appendChild(squares);
+
+    
     
     squares.addEventListener("mouseover", () => {
-        squares.style.backgroundColor = "grey";
+        // squares.style.backgroundColor = "grey";
+        let firstRGB = Math.floor(Math.random() * 256);
+let secondRGB = Math.floor(Math.random() * 256);
+let thirdRGB = Math.floor(Math.random() * 256);
+
+const randomColors = [firstRGB, secondRGB, thirdRGB].join(',');
+        squares.style.backgroundColor = `rgb(${randomColors})`
          
     })
 
@@ -37,7 +44,7 @@ btn.addEventListener("click", () => {
 
     } else {
         let gridSize = 640 / size;
-        
+
         const allSquares = document.querySelectorAll(".squares");
         for (let square of allSquares) {
             square.remove();
@@ -54,8 +61,15 @@ btn.addEventListener("click", () => {
             container.appendChild(squares);
     
             squares.addEventListener("mouseover", () => {
-                squares.style.backgroundColor = "grey";
+                // squares.style.backgroundColor = "grey";
+                let firstRGB = Math.floor(Math.random() * 256);
+let secondRGB = Math.floor(Math.random() * 256);
+let thirdRGB = Math.floor(Math.random() * 256);
+
+const randomColors = [firstRGB, secondRGB, thirdRGB].join(',');
+                squares.style.backgroundColor = `rgb(${randomColors})`
             });
         }
     }
 });
+
